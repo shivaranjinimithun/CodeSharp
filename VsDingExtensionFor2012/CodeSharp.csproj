@@ -156,34 +156,14 @@
       <Link>OptionsDialog.cs</Link>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="..\VsDingExtensionProject\Players.cs">
-      <Link>Players.cs</Link>
-    </Compile>
     <Compile Include="..\VsDingExtensionProject\Properties\AssemblyInfo.cs" />
     <Compile Include="..\VsDingExtensionProject\Resources.Designer.cs" />
-    <Compile Include="..\VsDingExtensionProject\SingleSoundSelectControl.cs">
-      <Link>SingleSoundSelectControl.cs</Link>
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="..\VsDingExtensionProject\SingleSoundSelectControl.Designer.cs">
-      <Link>SingleSoundSelectControl.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\VsDingExtensionProject\SoundSelectControl.cs">
-      <Link>SoundSelectControl.cs</Link>
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="..\VsDingExtensionProject\SoundSelectControl.Designer.cs">
-      <Link>SoundSelectControl.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\VsDingExtensionProject\SoundsSelectOptionsPage.cs">
-      <Link>SoundsSelectOptionsPage.cs</Link>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="..\VsDingExtensionProject\WinApiHelper.cs">
       <Link>WinApiHelper.cs</Link>
     </Compile>
     <Compile Include="CodeSharpPackage.cs" />
     <Compile Include="Guids.cs" />
+    <Compile Include="Players.cs" />
     <Compile Include="UserActions.cs" />
     <Compile Include="UserActions.Designer.cs">
       <DependentUpon>UserActions.cs</DependentUpon>
@@ -197,15 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\VsDingExtensionProject\Resources.resx" />
-    <EmbeddedResource Include="..\VsDingExtensionProject\SingleSoundSelectControl.resx">
-      <Link>SingleSoundSelectControl.resx</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\VsDingExtensionProject\SoundSelectControl.resx">
-      <Link>SoundSelectControl.resx</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\VsDingExtensionProject\SoundsSelectOptionsPage.resx">
-      <Link>SoundsSelectOptionsPage.resx</Link>
-    </EmbeddedResource>
     <EmbeddedResource Include="CodeSharp.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -214,9 +185,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\VsDingExtensionProject\Resources\build.wav" />
-    <Content Include="..\VsDingExtensionProject\Resources\debug.wav" />
-    <Content Include="..\VsDingExtensionProject\Resources\ding.wav" />
     <Content Include="ReleaseNotes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>

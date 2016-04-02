@@ -20,21 +20,13 @@ namespace VitaliiGanzha.VsDingExtension
     [InstalledProductRegistration("#110", "#112", "1.1", IconResourceID = 400)]
     [Guid(GuidList.codeSharpPkgString)]
     [ProvideAutoLoad("{f1536ef8-92ec-443c-9ed7-fdadf150da82}")]
-    [ProvideToolWindow(typeof(OptionsDialog), Orientation = 
-ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed, Window = 
-Microsoft.VisualStudio.Shell.Interop.ToolWindowGuids.Outputwindow, 
-MultiInstances = false, Transient = true, Width = 500, Height = 250, 
-PositionX = 300, PositionY = 300)]
-    [ProvideOptionPage(typeof(OptionsDialog), "Ding", "General settings", 0, 0, true)]
-    [ProvideOptionPage(typeof(SoundsSelectOptionsPage), "Ding", "Overrride sounds", 0, 0, true)]
     public sealed class CodeSharpPackage : Package, IDisposable
     {
         private DTE2 applicationObject;
         private BuildEvents buildEvents;
         private DebuggerEvents debugEvents;
         private OptionsDialog _options = null;
-        private SoundsSelectOptionsPage soundOverridesSettings = null;
-        private Players players = null;
+        //private Players players = null;
 
         public CodeSharpPackage()
         {
@@ -52,8 +44,6 @@ PositionX = 300, PositionY = 300)]
             buildEvents = applicationObject.Events.BuildEvents;
             debugEvents = applicationObject.Events.DebuggerEvents;
 
-            players = new Players(this.SoundSettingsOverrides);
-            this.soundOverridesSettings.OnApplyHandler += () => this.players.SoundSettingsChanged();
             SetupEventHandlers();
         }
 
@@ -128,17 +118,7 @@ PositionX = 300, PositionY = 300)]
             }
         }
 
-        private SoundsSelectOptionsPage SoundSettingsOverrides
-        {
-            get
-            {
-                if (this.soundOverridesSettings == null)
-                {
-                    this.soundOverridesSettings = (SoundsSelectOptionsPage)GetDialogPage(typeof(SoundsSelectOptionsPage));
-                }
-                return this.soundOverridesSettings;
-            }
-        }
+      
 
         private void HandleEventSafe(EventType eventType, string messageText, ToolTipIcon icon = ToolTipIcon.Info)
         {
@@ -231,7 +211,7 @@ PositionX = 300, PositionY = 300)]
 
         public void Dispose()
         {
-            players.Dispose();
+            //players.Dispose();
         }
     }
 }
