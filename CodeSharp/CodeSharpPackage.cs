@@ -124,15 +124,15 @@ namespace Hackathon.CodeSharp
             // Start the child process.
             System.Diagnostics.Process p = new System.Diagnostics.Process();
             //// Redirect the output stream of the child process.
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.FileName = @"C:\Users\Shivaranjini\Documents\GitHub\CodeSharp\CongnitiveServices\Webcamtest.exe";
-            p.Start();
+            //p.StartInfo.UseShellExecute = false;
+            //p.StartInfo.RedirectStandardOutput = true;
+            //p.StartInfo.FileName = @"C:\Users\Shivaranjini\Documents\GitHub\CodeSharp\CongnitiveServices\Webcamtest.exe";
+            //p.Start();
            
            // p.WaitForExit();
           
            // p.WaitForExit();
-           // this.Talk("you break the build and it is good to fail sometimes");
+            this.Talk("you break the build and it is good to fail sometimes");
             
         }
 
