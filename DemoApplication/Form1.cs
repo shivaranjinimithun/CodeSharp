@@ -12,7 +12,7 @@ namespace DemoApplication
 {
     public partial class Form1 : Form
     {
-        comment to hide error
+
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace DemoApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            throw new Exception("to test exception audio"); 
+            throw new FormatException("to test exception audio"); 
         }
     }
 }

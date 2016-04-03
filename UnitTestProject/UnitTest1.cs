@@ -9,7 +9,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.Fail("failed to demonstrate concept");
+            Assert.AreEqual(2, 1);
         }
     }
 }

@@ -113,7 +113,7 @@ namespace Hackathon.CodeSharp
         private async void OnProjectBuildFinished(string Project, string ProjectConfig, string Platform, string SolutionConfig, bool Success)
         {
             if (Success) return;
-            // Speak a string.
+            //// Speak a string.
             //try
             //{
             //    CamCam cam = new CamCam();
@@ -121,8 +121,18 @@ namespace Hackathon.CodeSharp
             //    this.Talk("build error");
             //}
             //catch (Exception e) { this.Talk(e.Message); }
-
-            this.Talk("you break the build and it is good to fail sometimes");
+            // Start the child process.
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            //// Redirect the output stream of the child process.
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.FileName = @"C:\Users\Shivaranjini\Documents\GitHub\CodeSharp\CongnitiveServices\Webcamtest.exe";
+            p.Start();
+           
+           // p.WaitForExit();
+          
+           // p.WaitForExit();
+           // this.Talk("you break the build and it is good to fail sometimes");
             
         }
 
